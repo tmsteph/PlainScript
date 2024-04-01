@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PlainScript Console</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #2f4f4f; /* Dark slate gray background */
+      color: #d0e6df; /* Light gray for text */
+    }
+    #console {
+      background-color: #38494b; /* Even darker gray background */
+      padding: 10px;
+      margin: 20px 0;
+      border: 1px solid #495c5e; /* Slightly lighter border color */
+      border-radius: 4px;
+      height: 300px;
+      overflow-y: auto;
+      color: #d0e6df; /* Maintaining the light gray text color */
+    }
+    #input {
+      width: calc(100% - 22px); /* Full-width input */
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #495c5e;
+      border-radius: 4px;
+      background-color: #38494b; /* Darker gray background for input field */
+      color: #d0e6df; /* Light gray text for input */
+    }
+    p {
+      margin: 5px 0;
+      color: #d0e6df; /* Light gray text for paragraphs */
+    }
+    code {
+      background-color: #495c5e; /* Slightly darker gray for code elements */
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+      color: #d0e6df; /* Light gray text for code */
+    }
+  </style>
+</head>
+<body>
+  <h2>Welcome to the PlainScript Console</h2>
+  <p>Type your PlainScript commands in the box below and press Enter. Try starting with <code>"Remember my name is ..."</code> followed by your name.</p>
+  <div id="console"></div>
+  <input type="text" id="input" onkeypress="if(event.keyCode==13){processCommand(this.value); this.value='';}" placeholder="Type your PlainScript command here">
+  
+  <script src="plainscript.js"></script>
+</body>
+</html>
